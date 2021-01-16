@@ -1,0 +1,1 @@
+<mw:set var="isMobile" value="Params['mobile'] ?? (!(Request.Url.Host.toLower in ['treinamento2.mundiware.com', 'dev.treinamento2.mundiware.com', 'dev.emtempo.com.br' ]) && Params['previewDevice'].toLower != 'desktop')"/><!-- isMobile = ${isMobile} --><!-- Host = ${Request.Url} -->

@@ -1,0 +1,47 @@
+<%<script type="text/javascript">
+	var urlPath = "<mw:url value='themePath'/>";
+	var appPath = "<mw:url path='~/'/>";
+
+	<mw:if test="!(Request.Path.toLower.endsWith('/preview') || Request.Path.toLower.endsWith('/preview/'))">
+		var defaultMobile;
+		var defaultDesktop;
+		var mobileToDesktop = {
+			'emtempo.com.br': 'd.emtempo.com.br',
+			'emtempo.com.br': defaultDesktop = 'd.emtempo.com.br',
+		};
+		var desktopToMobile = {
+                        'd.emtempo.com.br': 'emtempo.com.br',
+			'd.emtempo.com.br': defaultMobile = 'emtempo.com.br',
+		};
+		
+		function checkWidth() {
+			
+			var newUrl = new URL(location);
+			
+			if(newUrl.protocol != 'https:') {
+				newUrl.protocol = 'https:';
+			}
+			
+			if (window.screen.width >= 1024 && desktopToMobile[newUrl.host] == null) {
+				newUrl.host = mobileToDesktop[newUrl.host] || defaultDesktop;
+			}
+			else if (window.screen.width < 1024 && mobileToDesktop[newUrl.host] == null) {
+				newUrl.host = desktopToMobile[newUrl.host] || defaultMobile;
+			}
+			
+			if(newUrl.toString() != location.toString()) {
+				location.href = newUrl.toString();
+			}
+		}
+		
+		if(window.addEventListener) {
+			window.addEventListener('resize', checkWidth);
+		} else if(window.attachEvent) {
+			window.attachEvent('onresize', checkWidth);
+		} else {
+			window['onresize'] = checkWidth
+		}
+		
+		checkWidth();
+	</mw:if>
+</script>%>

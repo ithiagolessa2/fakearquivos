@@ -1,0 +1,650 @@
+<mw:setResponseData cacheability="public" cacheTimeout="1m" fileCacheTimeout="1m"/>
+<mw:if test="article.articleId == 81551">
+    <mw:applyTemplate path="modules/lancamento.module"/>
+</mw:if>
+<mw:elseIf test="article.articleId == 82605">
+    <mw:applyTemplate path="pages/infografico-guia-segundinha.page"/>        
+</mw:elseIf>
+<mw:elseIf test="article.articleId == 84216">
+    <mw:applyTemplate path="modules/infografico/infografico-cinema-wonderwoman.module"/>        
+</mw:elseIf>
+<mw:else>    
+    <mw:set var="exclusionArticles" value="list(article.articleId)"/>
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+        <head>            
+            <% ONE SIGNAL %>
+            <%<mw:applytemplate path="modules/onesignaldesktop.module" />%>
+            <% METAS 
+            <mw:applytemplate path="modules/HeadMetasArticle2.module" />%>
+            <% VARIABLES 
+            <mw:applyTemplate path='modules/variables.module'/>%>
+            <% BUNDLE CSS %>
+            <mw:applytemplate path="modules/ArticleCssBundle.module" />
+
+            <script type="application/ld+json">
+                {
+                "@context": "https://schema.org",
+                "@type": "NewsArticle",
+                "mainEntityOfPage": "${canonicalSet}",
+                "headline": "<mw:Property Value='article.header'/>",
+                "datePublished": "<mw:Property Value='article.publishDate' Format='yyyy-MM-dd&quot;T&quot;HH:mm:ss' />-04:00",
+                "dateModified": "<mw:Property Value='article.versionDate' Format='yyyy-MM-dd&quot;T&quot;HH:mm:ss' />-04:00",
+                "description": "<mw:Property  Value='article.safeDescription'/>",
+                "author": {
+                    "@type": "Person",
+                    "name": "<mw:Property  Value='article.author' />"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "<mw:Property  Value='publish.author' />",
+                    "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://emtempo.com.br/themes/AET/img/logo_sd.png",
+                    "width": 300,
+                    "height": 60
+                    }
+                },
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "<mw:Url Value='urlCDN + article.allImages[0].path'/>"
+                    }
+                }
+            </script>
+        
+            <!-- Taboola -- Retirado 03-11-2020
+            <script type="text/javascript">
+            window._taboola = window._taboola || [];
+            _taboola.push({article:'auto'});
+            !function (e, f, u, i) {
+                if (!document.getElementById(i)){
+                e.async = 1;
+                e.src = u;
+                e.id = i;
+                f.parentNode.insertBefore(e, f);
+                }
+            }(document.createElement('script'),
+            document.getElementsByTagName('script')[0],
+            '//cdn.taboola.com/libtrc/portalemtempo-portalemtempo/loader.js',
+            'tb_loader_script');
+            if(window.performance && typeof window.performance.mark == 'function')
+                {window.performance.mark('tbl_ic');}
+            </script>
+            Taboola -->
+
+            <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+            <script>
+            window.googletag = window.googletag || {cmd: []};
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/245408516/article-dk-footer-resp', [660, 90], 'div-gpt-ad-1604592869673-0').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.pubads().collapseEmptyDivs();
+                googletag.enableServices();
+            });
+            </script>
+
+        </head>
+
+        <body>
+            <script>fbq('track', 'ViewContent');</script>
+                       
+            <header>
+                <% COLORS %>
+                <mw:loadcategories categoryId="categoryInfo.parentCategory.categoryId" var="parentCategory"/>
+                <mw:if test='categoryInfo.parentCategory.categoryId==0'>
+                    <mw:set var="categoryColor" value="categoryInfo.name"/>
+                </mw:if>
+                <mw:else>
+                    <mw:set var="categoryColor" value="parentCategory.name"/>
+                </mw:else>
+                <mw:set var="categoryNome" value="categoryInfo.name"/>
+
+                <% TOP %>
+                <mw:if test="#application.luto">
+                    <mw:loadtemplate modulename="TopLuto" var="TopHome" />
+                    <mw:applytemplate value="TopHome" />
+                </mw:if>
+                <mw:else>
+                    <mw:loadtemplate modulename="Top" var="TopHome" />
+                    <mw:applytemplate value="TopHome" />
+                </mw:else>
+            </header>
+
+            <% ARTIGO %>
+            <main class="intern"><!-- TESTE -->
+                <div class="container">
+                    <mw:if test="categoryNome == 'Polícia'"><!-- DO NOTHING --></mw:if>
+                    <mw:if test="categoryNome == 'Polícia-Amazonas'"><!-- DO NOTHING --></mw:if>
+                    <mw:if test="categoryNome == 'Polícia-Brasil'"><!-- DO NOTHING --></mw:if>
+                    <mw:if test="categoryNome == 'Polícia-Mundo'"><!-- DO NOTHING --></mw:if>
+                    <mw:else>
+                        <div class="row">
+                            <div class="col-sm-12 mw-pad-l-0 mw-pad-r-0 mw-m-t-15"> 
+                                <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+                                <div id="gpt-passback-1140x190">
+                                    <script>
+                                        window.googletag = window.googletag || {cmd: []};
+                                        googletag.cmd.push(function() {
+                                        googletag.defineSlot('/21799500428/212emtempo', [[300, 250], [1140, 190]], 'gpt-passback-1140x190').addService(googletag.pubads());
+                                        googletag.enableServices();
+                                        googletag.display('gpt-passback-1140x190');
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </mw:else>                
+
+                    <section class="cat-head col-sm-12 mw-pad-l-0 mw-pad-r-0" style="overflow:hidden; ">
+                        <h3 style="font-weight:bold;" class="c2 <mw:if test='#application.luto'>c2-luto</mw:if><mw:else> c2-<mw:property value='categoryColor' transform='normalize, replace-spaces-with-dashes, lower-case' /></mw:else>">
+                            <mw:if test="!isEmpty(article.subheader)">
+                                <mw:property value='article.subHeader' />
+                            </mw:if>
+                            <mw:else>
+                                <mw:property value="article.categoryInfo.name"/>
+                            </mw:else>
+                        </h3>
+                        <hr>
+                    </section>
+
+                    <h1 class="title resize col-sm-12 c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='categoryNome' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>" style="font-weight:bold; padding-left:10%; padding-right:10%; min-height:80px;">
+                        <mw:set var="titleLines" value="article.header.split('\n')"/>
+                        <mw:property value="titleLines[0]" filter="false"/>
+                        <mw:iterator value="titleLines" offset="1" index="index">
+                            <mw:set var="countEnters" value="index + 1"/>
+                            <br/>
+                            <mw:property value="titleLines[countEnters]" filter="false" />
+                        </mw:iterator>
+                    </h1>
+
+                    <mw:if test="!isEmpty(article.lead)">
+                        <h2 class="subtitle">
+                            <mw:set var="titleLines" value="article.lead.split('\n')"/>
+                            <mw:property value="titleLines[0]" filter="false"/>
+                            <mw:iterator value="titleLines" offset="1" index="index">
+                                <mw:set var="countEnters" value="index + 1"/>
+                                <br/>
+                                <mw:property value="titleLines[countEnters]" filter="false" />
+                            </mw:iterator>
+                        </h2>
+                    </mw:if>
+
+                    <div class="publish-info mw-m-b-0">
+                        <mw:if test="!isEmpty(article.author)">
+                            <label class="author mw-m-b-15">
+                                <mw:if test="article.author in [ 'Márcio Azevedo' , 'Bruna Chagas' , 'Wal Lima' , 'Elias Pedroza' , 'Thaylane Enes' , 'André Tobias' , 'Gabriel Costa' , 'Sachs' , 'Gláucia Chair' , 'Arthur Castro', 'Henderson Martins', 'Rosianne Couto', 'Emerson Quaresma', 'Márcio Melo', 'Thiago Monteiro', 'Roger Lima', 'Luiz Otavio Martins', 'Ione Moreno', 'Michael Dantas', 'Lívia Nadjanara', 'Fabiane Morais', 'Isac Sharlon', 'Bruna Souza']">
+                                    <a href="<mw:url path='~/authors'><mw:param name='name' value='article.author'/></mw:url>">
+                                        <mw:property value='article.author' />
+                                    </a>
+                                </mw:if>
+                                <mw:else>
+                                    <mw:property value='article.author' />
+                                </mw:else>
+                            </label>
+                        </mw:if>
+
+                        <mw:if test="!isEmpty(article.publishDate)">
+                            <label class="date">
+                                <mw:property value='article.publishDate' format="dd ' de ' MMMM ' de 'yyyy' - '  HH:mm "/>
+                            </label>
+                        </mw:if>
+                    </div>
+                    
+                    <!-- VÍDEOS -->
+                    <mw:if test="isEmpty(videosInline) and !isEmpty(article.videos)">
+                        <mw:Iterator Value="article.videos" Var="videoElement" limit="1" Index="videoIndex" >
+                            <mw:if test="isEmpty(videoElement.externalId)">
+                                <div class="interna-video">
+                                    <div class="">
+                                        <div class="">
+                                            <div class="">
+                                                <i class="" aria-hidden="true"></i>
+                                            </div>
+                                            <video controls style="width:100%"  class="" id="videoPlayer<mw:Property runat='server' value='videoIndex' />" >
+                                                <source class='mw-fit-width dol-h-465 mw-b-none' src="<mw:Url runat='server' Value='videoInfo.path' />" type="video/mp4" />
+                                            </video>
+                                        </div>
+
+                                        <mw:if test="videoInfo.description != null">
+                                            <description class="mw-m-t-10">
+                                                <span><mw:property value="videoInfo.description"/> <mw:property value="videoInfo.author"/></span>
+                                            </description>
+                                        </mw:if>
+                                    </div>
+                                </div>
+                            </mw:if>
+                            <mw:ElseIf test="videoElement.externalType.toLower=='youtube'">
+                                <mw:property value="videoElement.externalPlaylistId" />
+                                <div class="interna-video">
+                                    <div class="iframe-container" >
+                                        <iframe class="mw-fit-width" src="https://www.youtube.com/embed/<mw:property value='videoElement.externalId'/>"></iframe>
+                                    </div>
+                                    <description class="mw-legenda bg1 <mw:if test='#application.luto'>bg-luto</mw:if><mw:else> bg-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                        <div style="padding-left:10px;">
+
+                                            <span><mw:property value="videoElement.description"/> | Autor: <mw:property value="videoElement.author"/></span>
+                                        </div>
+                                    </description>
+                                </div>
+                            </mw:ElseIf>
+                            <mw:ElseIf test="videoElement.externalType.toLower=='dailymotion'">
+                                <div class="interna-video">
+                                    <div class="iframe-container" >
+                                        <iframe class="mw-fit-width" src="http://www.dailymotion.com/embed/video/<mw:property value='videoElement.externalId'/>"></iframe>
+                                    </div>
+
+                                    <description class="mw-legenda bg1 <mw:if test='#application.luto'>bg-luto</mw:if><mw:else> bg-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                        <div style="padding-left:10px;">
+
+                                            <span><mw:property value="videoElement.description"/> | Autor: <mw:property value="videoElement.author"/></span>
+                                        </div>
+                                    </description>
+                                </div>
+                            </mw:ElseIf>
+                            <mw:ElseIf test="videoElement.externalType.toLower=='vimeo'">
+                                <div class="interna-video">
+                                    <div class="iframe-container" >
+                                        <iframe class="mw-fit-width" src="https://player.vimeo.com/video/<mw:property value='videoElement.externalId'/>"></iframe>
+                                    </div>
+                                    <description class="mw-legenda bg1 <mw:if test='#application.luto'>bg-luto</mw:if><mw:else> bg-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                        <div style="padding-left:10px;">
+                                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                                            <span><mw:property value="videoElement.description"/> | Autor: <mw:property value="videoElement.author"/></span>
+                                        </div>
+                                    </description>
+                                </div>
+                            </mw:ElseIf>
+
+                        </mw:Iterator>
+                    </mw:if>
+                    <mw:elseIf test="article.specialImages[&apos;Artigo Destaque&apos;] != null">
+                        <!-- IMAGEM DESTAQUE -->
+                        <section class="box-cover mw-pad-l-0 mw-pad-r-0">
+                            <div class="cover" alt="" title="" style="background-position:center; background-image: url(${urlCDN}<mw:Url  Value='article.specialImages[&apos;Artigo Destaque&apos;].path' />);"></div>
+                            <description class="mw-legenda bg1 <mw:if test='#application.luto'>bg-luto</mw:if><mw:else> bg-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                <div style="padding-left:10px;">
+                                    <span><mw:property value="article.specialImages[&apos;Artigo Destaque&apos;].description"/> | Foto: <mw:property value="article.specialImages[&apos;Artigo Destaque&apos;].author"/></span>
+                                </div>
+                            </description>
+                        </section>
+                    </mw:elseIf>
+                    
+                    <div class="news-wrapper col-sm-12 mw-pad-l-0 mw-pad-r-0 mw-m-t-5 mw-pad-b-30"> 
+                        <section class="column-comum col-sm-8 mw-pad-0" style="/*display:flex; flex-wrap:wrap; align-self: flex-start; width:75%;*/"> 
+                            
+                            <!-- SOCIAL -->
+                            <section class="column-social col-sm-1 mw-pad-l-0" style="/*width:25%; min-height:1px; margin-top:0px;*/">
+                                <div class="social-share" style="">
+                                    <a href="<mw:Url  Path='http://www.facebook.com/sharer.php'><mw:Param  Name='u'><mw:Url full='true' Value='article.friendlyUrl'/></mw:Param></mw:Url>" class="c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>" target="_blank">
+                                        <i class="fa fa-facebook-f"></i>
+                                    </a>
+                                    <a href="<mw:Url  Path='https://twitter.com/intent/tweet'><mw:Param  Name='text' Value='article.header'/><mw:Param  Name='via'>emtempooficial</mw:Param><mw:Param  Name='url'><mw:Url full='true' Value='article.friendlyUrl'/></mw:Param></mw:Url>" target="_blank" class="c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="whatsapp://send?text=<mw:property value='article.header'/>: <mw:url full='true' value='article.friendlyUrl'/>" class="c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                        <i class="fa fa-whatsapp"></i>
+                                    </a>
+                                    <a href="<mw:url Path='http://www.linkedin.com/shareArticle'><mw:Param Name='mini'>true</mw:Param><mw:Param Name='url'><mw:url full='true' value='article.friendlyUrl'/></mw:Param><mw:Param Name='title' value='article.header'/><mw:Param Name='summary' value='article.description'/><mw:Param Name='source'>emtempo.com.br</mw:Param></mw:url>" class="c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>" target="_blank">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" class="c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>" id="mailshare">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </section>
+
+                            <section class="column-news col-sm-11 mw-pad-0" style="/*width:75%; min-height:1px*/">
+                                <div class="report mw-pad-r-0" style="width:100%">
+                                    
+                                    <!-- ÁUDIO -->
+                                    <mw:if test="isEmpty(audiosInline)">
+                                        <mw:Iterator Value="article.audios" Var="audioElement" Index="audioIndex" >
+                                            <div class="mw-m-b-15 bg1 <mw:if test='#application.luto'>bg-luto</mw:if><mw:else> bg-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                                <audio controls style="width:100%; padding-left:5px; padding-right:5px; margin-top:5px;">
+                                                    <source src="${urlCDN}<mw:Url Value='audioElement.path' />" type="audio/mpeg"/>
+                                                </audio>
+                                                <description class="mw-legenda bg1 <mw:if test='#application.luto'>bg-luto</mw:if><mw:else> bg-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                                    <div style="padding-left:10px;">
+
+                                                        <span><mw:property value='audioElement.description'/> | Autor: <mw:property value='audioElement.author'/></span>
+                                                    </div>
+                                                </description>
+                                            </div>
+                                        </mw:Iterator>
+                                    </mw:if>
+
+                                    <!-- CONTEÚDO -->
+                                    <div id="aet-text">
+                                        <mw:refactorHtml>
+                                            <mw:pullUp tags="figure" ParentTag="p"/>
+                                            <mw:remove tags="br" IgnoreAncestorTag="p"/>
+                                            <mw:remove tags="span" ParentTag="p" conditions="IsEmptyOrWhitespace"/>
+                                            <mw:remove tags="p" conditions="IsEmptyOrWhitespace"/>
+                                            <mw:replace tags="p" with="p" removeAttributes="*"/>
+                                            <mw:property value="article.text" filter="false"/>
+                                        </mw:refactorHtml>
+                                    </div>
+
+
+                                    <div style="margin:20px auto; height:auto">                                
+                                        <!-- /245408516/article-dk-footer-resp -->
+                                        <div id='div-gpt-ad-1604592869673-0' style='width: 660px; height: 90px; text-align:center'>
+                                            <script>
+                                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1604592869673-0'); });
+                                            </script>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- TruVid -- Retirado 03-11-2020
+                                    <div class="col-md-12 mw-m-t-30 mw-m-b-30" id="truvidDkt">
+                                        <script data-cfasync="false" async type="text/javascript">var truvidScript = document.createElement('script'); truvidScript.async = true; truvidScript.setAttribute('data-cfasync','false'); truvidScript.type = 'text/javascript'; truvidScript.src = '//stg.truvidplayer.com/index.php?sub_user_id=797&widget_id=3417&playlist_id=2437&m=a&cb=' + (Math.random() * 10000000000000000); var currentScript = document.currentScript || document.scripts[document.scripts.length - 1]; currentScript.parentNode.insertBefore(truvidScript, currentScript.nextSibling);</script>
+                                    </div>
+                                    TruVid -->
+
+                                    <!-- GALERIA -->
+                                    <mw:if Test="article.imagesNormal.size == 2 || article.imagesNormal.size gt 2">
+                                        <div class="aet-galeria" style="height:auto;">
+                                            <mw:applyTemplate path="modules/article/carousel.module"/>
+                                        </div>
+                                        <script type="text/javascript">
+                                            $('#aet-text p:eq(3)').append($('.aet-galeria'));
+                                        </script>
+                                    </mw:if>
+                                    
+                                    <!-- TAGS -->
+                                    <mw:if test="!isEmpty(article.tags)">
+                                        <div class="col-md-12 mw-pad-0 " style="margin-top:15px; margin-bottom:15px">
+                                            <span>Tags: </span>
+                                            <mw:iterator var="tag" value="article.tags">
+                                                <a class="mw-pad-5" style="padding:2px 5px; text-decoration: none; color:#fff; font-size:11px; border-radius:3px; background:#<mw:property value='categoryInfo.color' format='X6'/>" href="<mw:url path='~'/>tags/<mw:property value='tag.name'/>"><span>${tag.name}</span></a>
+                                            </mw:iterator>
+                                        </div>
+                                    </mw:if>
+
+                                    <!-- ERRATA -->
+                                    <mw:if test="article.errata">
+                                        <h3 class="mw-pad-t-15 mw-pad-b-15 c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                                            <b>Errata</b>
+                                        </h3>
+                                        <mw:if test="isEmpty(article.errata.text)">
+                                            <p>${article.errata.text2}</p>
+                                        </mw:if>
+                                        <mw:else>
+                                            <p><b>Onde se lê:</b> ${article.errata.text}</p>
+                                            <p><b>Se lê:</b> ${article.errata.text2}</p>
+                                        </mw:else>
+                                    </mw:if>
+                                    
+                                    <!--
+                                    <div class="col-md-12 mw-m-t-30 mw-m-b-30" id="truvidDkt">
+                                        <script data-cfasync="false" async type="text/javascript">var truvidScript = document.createElement('script'); truvidScript.async = true; truvidScript.setAttribute('data-cfasync','false'); truvidScript.type = 'text/javascript'; truvidScript.src = '//stg.truvidplayer.com/index.php?sub_user_id=797&widget_id=3417&playlist_id=2437&m=a&cb=' + (Math.random() * 10000000000000000); var currentScript = document.currentScript || document.scripts[document.scripts.length - 1]; currentScript.parentNode.insertBefore(truvidScript, currentScript.nextSibling);</script>
+                                    </div>
+                                    -->
+
+                                    <!--<div class="col-md-12 mw-m-t-15 mw-m-b-15 bg-<mw:property value='categoryColor' transform='normalize, replace-spaces-with-dashes, lower-case' />" id="zap_campain" style="padding-bottom:10px; padding-top:7.5px; text-align:center; border-radius:5px; color:#fff">
+                                        <a style="text-decoration:none;" href="https://api.whatsapp.com/send?phone=5592982440066&text=Ol%C3%A1,%20Em%20tempo!%20Envie%20%23emtempo%20ou%20%23agora%20para%20receber%20um%20de%20nossos%20jornais">
+                                            Receba a versão digital dos jornais Em Tempo e Agora em seu Whatsapp. Clique aqui!                                           
+                                        </a>                                        
+                                    </div>-->
+                                </div>
+                            </section>
+                            
+                            <!-- LEIA MAIS: AJAX -->
+                            <section class="recommended col-sm-12 mw-pad-l-0 mw-pad-r-0 mw-pad-t-30" data-article-id="${article.articleId}" data-category-id="${categoryInfo.categoryId}">
+                            </section>
+                            
+                            
+                        </section>
+
+                        <section class="col-sm-4 mw-pad-r-0" style="/*width: 30%;*/">
+                            <!-- Start Audima Widget Injection -- Retirado 03-11-2020
+                            <div class="mw-pad-b-30">
+                                <div id="audimaWidget"></div>
+                                <script src="//audio.audima.co/audima-widget.js"></script>
+                                <script>
+                                    AudimaWidget.behaviorResponsive(AudimaWidget.PLAYER);
+                                </script>
+                            </div>    -->                        
+                            
+                            <div class="ads col-sm-12 mw-pad-l-30">
+                                <mw:if test="categoryInfo.name == 'Polícia'">
+                                    <!-- TODO -->
+                                </mw:if>
+                                <mw:else> 
+
+                                    <div class="col-sm-12 mw-pad-l-0 mw-pad-r-0 mw-pad-t-15 mw-pad-b-15 text-center">                                
+                                        <!-- /245408516/300x250-Editoria-4-LD -->
+                                        <div id='div-gpt-ad-1502811994461-0' style='height:250px; width:300px; margin-bottom:50px; margin-left:auto; margin-right:auto'>
+                                            <!-- Qdo precisar subir fora do Ad Manager                               
+                                            <img class="aet-rp" src="/themes/AET/img/aet-dev/ads/gov/fim-de-ano-27a31-12-19/FIM-DE-ANO-300x250.gif">
+                                            Qdo precisar subir fora do Ad Manager --> 
+                                            <!--<div data-premium="" data-adunit="EM_TEMPO_INTERNA_LATERAL_300X250_1" data-sizes-desktop="[[300,250]]"></div> --> 
+                                            <script>
+                                                googletag.cmd.push(function () {
+                                                    googletag.display('div-gpt-ad-1502811994461-0');
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>                
+                                   
+                                </mw:else>
+                            </div>
+
+                            <!-- MAIS LIDAS -->
+                            <section class="caixa-sidebar maislidas mw-pad-l-0" data-category-id="${categoryInfo.categoryId}">
+                            </section>  
+
+                                                                                 
+
+                            <!-- /245408516/300x250_LD_Editoria_3 
+                            <div id='div-gpt-ad-1499784747375-2' style='height:250px; width:300px;'>
+                                <script>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1499784747375-2'); });
+                                </script>
+                            </div>
+                            -->
+                            <mw:if test="categoryInfo.name == 'Polícia'">
+                                <!-- TODO -->
+                            </mw:if>
+                            <mw:else>
+                                <div class="col-sm-12 mw-pad-l-0 mw-pad-r-0 mw-pad-t-15 mw-pad-b-15 text-center">
+                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- Retangulo Grande 336x280 -->
+                                    <ins class="adsbygoogle"
+                                            style="display:inline-block;width:336px;height:280px"
+                                            data-ad-client="ca-pub-6983500642985289"
+                                            data-ad-slot="6893958252"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                </div>
+                                <div class="col-sm-12 mw-pad-l-0 mw-pad-r-0 mw-pad-t-30 text-center">
+                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- Links responsivos -->
+                                    <ins class="adsbygoogle"
+                                        style="display:block"
+                                        data-ad-client="ca-pub-6983500642985289"
+                                        data-ad-slot="8532678258"
+                                        data-ad-format="link"></ins>
+                                    <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                </div>
+                            </mw:else>                        
+                        </section> 
+
+                        <%<section class="recommended col-sm-12 mw-pad-l-0 mw-pad-r-0 mw-pad-t-30" data-article-id="${article.articleId}" data-category-id="${categoryInfo.categoryId}">
+					
+				        </section>%>                      
+                    </div>                     
+
+
+                    <mw:applytemplate path="modules/HomeJsBundle.module" />
+
+
+                    <div class="row">
+                        <div class="col-sm-12 mw-pad-l-0 mw-pad-r-0 mw-m-t-15"> 
+                            <!-- /245408516/728x90_Home_Topo -->
+                            <div class="adsense-top text-center" style="background-color:#fff; margin:15px auto;" >
+                                <div id='div-gpt-ad-1551384713789-0' style='height:auto; width:auto; margin:auto'>
+                                    <script>
+                                        googletag.cmd.push(function () {
+                                            googletag.display('div-gpt-ad-1551384713789-0');
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- COMENTÁRIOS -->
+                    <section class="comments" style="z-index:2; background-color: #fff;">
+                        <div class="section-part-title mw-m-t-15">
+                            <div class="b1 <mw:if test='#application.luto'>b-luto</mw:if><mw:else> b-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>"><span class="bg1 <mw:if test='#application.luto'>bg-luto</mw:if><mw:else> bg-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">Comentários</span></div>
+                            <hr class="b1 <mw:if test='#application.luto'>b-luto</mw:if><mw:else> b-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">
+                        </div>
+                        <div class="comments-area">
+                            <div id="mw_thread"></div>
+                            <script>
+                                //debugger;
+                                $.get('<mw:url path="~/comentarios"/>', {articleId: ${article.articleId}}, function (data) {
+                                    var $data = $(data);
+                                    $data.find('input[name=friendlyUrl]').val("<mw:Url value='article.friendlyUrl' />");
+
+                                    $('#mw_thread').html($data);
+                                });
+                            </script>
+                        </div>
+                    </section>
+
+                     <!-- Taboola Snippet -- Retirado 03-11-2020
+                    <div id="taboola-below-article-thumbnails"></div>
+                    <script type="text/javascript">
+                    window._taboola = window._taboola || [];
+                    _taboola.push({
+                        mode: 'alternating-thumbnails-a',
+                        container: 'taboola-below-article-thumbnails',
+                        placement: 'Below Article Thumbnails',
+                        target_type: 'mix'
+                    });
+                    </script>
+                    Taboola Snippet -->
+                </div>
+
+            </main>
+           
+
+            <!-- FOOTER -->
+            <mw:if test='#application.luto'>
+                <mw:applytemplate path="modules/FooterLuto.module" />
+            </mw:if>
+            <mw:else>
+                <mw:applytemplate path="modules/Footer.module" />
+            </mw:else>                     
+
+            <!-- Publicidade de Terceiros - Taboola - 20/01/19 - 10:52 HB - Renato Ipiranga -- Retirado 03-11-2020
+            <script type="text/javascript">
+            window._taboola = window._taboola || [];
+            _taboola.push({flush: true});
+            </script>
+            Publicidade de Terceiros - Taboola - 20/01/19 - 10:52 HB - Renato Ipiranga --> 
+
+            <script>
+            $(".interna-galeria").each(function () {
+                $(this).find(".interna-galeria-itens").slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    nextArrow: '.mw-next',
+                    prevArrow: false,
+                    asNavFor: '.interna-galeria-container',
+                    variableWidth: true,
+                    focusOnSelect: true
+                });
+            });
+            </script>
+            <script>
+            $(document).ready(function () {
+
+                function iframeAutofit(iframe) {
+                    var $iframe = $(iframe);
+
+                    try {
+                        $iframe.height($iframe.contents().find('body').height());
+                    } catch (e) {
+                    }
+                };
+
+                $('.report iframe.iframe-autofit').each(function () {
+                    var $this = $(this);
+
+                    // If already loaded
+                    iframeAutofit($this);
+
+                    // In case it is still loading or will be loaded
+                    $this.on('load', function () {
+                        iframeAutofit($this);
+                    });
+                });
+
+                var destaque = "";
+
+                $(".report > figure").next('p').filter(function () {
+                    return $(this).find('br').length && $(this).text().trim() == '';
+                }).remove();
+                $(".report > figure").prev('p').filter(function () {
+                    return $(this).find('br').length && $(this).text().trim() == '';
+                }).remove();
+
+                var videoUol = "<div class='player_dynad_tv'></div>";
+                $(".report > p:nth-of-type(4)").before(videoUol);
+
+
+                /*$(function(){
+                    $('#aet-text p:eq(3)').append($('#truvidDkt'));
+                });*/
+
+
+                $(function(){
+                    $('#aet-text > p').eq(-1).append($('#zap_campain'));
+                }); 
+
+                var paragrafos = $(".report > p").length;
+
+                <mw:iterator value="article.highlights"  var="destaques">
+                    destaque = '<mw:property value="destaques.text" escapeJavaScript="true"/>';
+                    paragrafoInserido = Math.floor(Math.random() * paragrafos);
+                    $(".report > p:eq(" + paragrafoInserido + ")").prepend('<h2 class="destaque c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>">' + destaque + '</h2>');
+                </mw:iterator>
+
+                var frase = "";
+                var autor = "";
+                var titulo = "";
+                /*< /mw:if>
+                < mw:if test = "article.inlineQuotes.size == 0" > */
+                <mw:iterator value = "article.quotes"  var = "frases">
+                    frase = '<mw:property value="frases.text" escapeJavaScript="true"/>';
+                    autor = '<mw:property value="frases.author" escapeJavaScript="true"/>';
+                    titulo = '<mw:property value="frases.authorTitle" escapeJavaScript="true"/>';
+
+                    paragrafoInserido = Math.floor(Math.random() * paragrafos);
+                    //alert(paragrafoInserido +" Frase " +frase);
+
+                    $(".report > p:eq(" + paragrafoInserido + ")").prepend('<div class="frase"><span class="quote-left c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>"><i>"</i></span><h2><i>' + frase + '</i><span class="quote-right c1 <mw:if test='#application.luto'>c-luto</mw:if><mw:else> c-<mw:property value='article.categoryInfo.name' transform='normalize, replace-spaces-with-dashes, lower-case' /> </mw:else>"><i>"</i></span></h2><div class="details"><p>' + autor + ', ' + titulo + '</p></div></div>');
+                </mw:iterator>
+                        
+            });
+            $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+                event.preventDefault();
+                $(this).ekkoLightbox({
+                    alwaysShowClose: true,
+                    showArrows: true
+                });
+            });
+            </script>
+        </body>
+    </html>
+</mw:else>

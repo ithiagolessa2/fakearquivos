@@ -1,0 +1,161 @@
+
+<%
+<script type="text/javascript">
+	var urlPath = "<mw:url value='themePath'/>";
+	var appPath = "<mw:url path='~/'/>";
+
+	<mw:if test="!(Request.Path.toLower.endsWith('/preview') || Request.Path.toLower.endsWith('/preview/'))">
+		function checkWidth() {
+			if(window.innerWidth >= 1024 && location.host != "d.emtempo.com.br"){
+				location.host = "d.emtempo.com.br";
+			}
+			if(window.innerWidth < 1024 && location.host == "d.emtempo.com.br"){
+				location.host = "emtempo.com.br";
+			}
+		}
+		
+		if(window.addEventListener) {
+			window.addEventListener('resize', checkWidth);
+		} else if(window.attachEvent) {
+			window.attachEvent('onresize', checkWidth);
+		} else {
+			window['onresize'] = checkWidth;
+		}
+		
+		checkWidth();
+	</mw:if>
+</script>
+%>
+
+
+<div class="temperature-forecast-box">
+	<div class="temperature-forecast-header">
+		<div class="temperature-forecast-column-icon">
+			<div class="icon"></div>
+			<div class="temperature"></div>
+		</div>
+		<div class="temperature-forecast-column-description">
+			<p class="title"></p>
+			<p class="description"></p>
+		</div>
+	</div>
+	<div class="temperature-forecast-body">
+		<h2></h2>
+		<ul></ul>
+	</div>
+</div>
+
+<header>
+	<div class="container" id="home">
+		<!-- Mobile menu -->
+		<button class="bt-menu mw-mobile" title="Menu">
+			<span class="hamburguer">
+				<span class="bar bar-1"></span>
+				<span class="bar bar-2"></span>
+				<span class="bar bar-3"></span>
+			</span>
+		</button>
+
+		<ul class="social-network">
+			<li>
+				<a href="https://www.facebook.com/emtempooficial/" target="_blank">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/emtempooficial/" target="_blank">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/user/tvemtempo" target="_blank">
+					<i class="fa fa-youtube" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/EMTEMPO_online" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+			</li>
+		</ul>
+
+		<a href="/" class="header-logo"><img src="<mw:url value='themePath'/>/img/logo.png" alt="emtempo"></a>
+
+
+		<ul class="network-content">
+			<li>
+				<input type="text" name="search" id="global-search" placeholder="o que você procura?"/>
+				<a href="#" class="search-icon">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</a>
+			</li>
+
+			
+		</ul>
+		<button class="bt-search mw-mobile fa fa-search fa-2x" title="Search">
+			
+		</button>
+		<ul class="mw-mobile">
+			<li class="">
+				<a href="#">
+					<img class="search-icon icon icon-user " src="<mw:url value='themePath'/>/img/icons/user-icon.png" alt="">
+				</a>
+			</li>
+		</ul>
+
+		<div class="header-info">
+			<span class="week"></span><span class="date"></span>
+			<span class="temperature">
+				<img src="" class="main-logo-weather" style="display: none;"/>
+				<span class="temp-txt"></span>
+			</span>
+			<span class="nivel">
+				<svg class="icon icon-nivel"><use xlink:href="#icon-nivel"></use></svg>
+				<span class="level-txt"></span>
+			</span>
+			<span class="dollar">
+				<svg class="icon icon-dollar">
+					<use xlink:href="#icon-dollar"></use>
+				</svg>
+				<span class="valor">
+				 R$<span> </span>
+				</span>
+			</span>
+		</div>
+	</div>
+	<nav class="categories">
+		<ul class="menus container" style='margin-left:auto; margin-right:auto; text-align:center; padding-right:15px; padding-left:15px; margin-top:0px; margin-bottom:0px;'>
+			<li class="categories-item no-hover pull-left" style="height:40px;">
+				<a style="padding-top:0px; padding-left:0px; padding-bottom:0px;" href="#home">
+					<img class="logo-fixa" src="<mw:url value='themePath'/>/img/marca_branca.svg"/>
+				</a>
+			</li>
+			<mw:loadtemplate modulename="menu" var="menu" />
+			<mw:applytemplate value="menu" />
+			<li class="categories-item sociais no-hover pull-right" style="height:40px;">
+				<a href="https://twitter.com/EMTEMPO_online" target="_blank">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li class="categories-item sociais no-hover pull-right" style="height:40px;">
+				<a href="https://www.youtube.com/user/tvemtempo" target="_blank">
+					<i class="fa fa-youtube" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li class="categories-item sociais no-hover pull-right" style="height:40px;">
+				<a href="https://www.instagram.com/emtempooficial/" target="_blank">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li class="categories-item sociais no-hover pull-right" style="height:40px;">
+				<a href="https://www.facebook.com/emtempooficial/" target="_blank">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+			
+		</ul>
+	</nav>
+
+</header>
